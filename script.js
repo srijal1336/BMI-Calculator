@@ -7,8 +7,8 @@ function Reset(){
     bmiText.textContent = 0;
     bmiText.className ="";
     descText.textContent = "N/A";
-    resetWeight.innerHTML = 0;
-    resetHeight.innerHTML = 0;
+    resetWeight.value = 0;
+    resetHeight.value = 0;
 }
 
 function Calculate(){

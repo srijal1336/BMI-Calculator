@@ -1,11 +1,14 @@
 const bmiText = document.getElementById('bmi');
 const descText= document.getElementById('desc');
-
+const resetWeight = document.getElementById('Weight')
+const resetHeight = document.getElementById('Height')
 
 function Reset(){
     bmiText.textContent = 0;
     bmiText.className ="";
     descText.textContent = "N/A";
+    resetWeight.innerHTML = 0;
+    resetHeight.innerHTML = 0;
 }
 
 function Calculate(){

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet"href="style.css">
+    <script src="script.js"defer></script>
+</head>
+<body>
+    <div id = "navbar">
+        <img src="logobmi.png" class="logo">
+        <li class = "navComponents"><a href="#home">Home</a></li>
+        <li class = "navComponents"><a href="#usages">Usages</a></li>
+        <li class = "navComponents"><a href="#information">Information</a></li>
+        <li class="navComponents"><a href="#calculate">Calculate</a></li>
+        </div>
+        <div class = "body" id = "home">
+            <h1 class="greeting">Welcome to BMI Calculator</h1>
+            <p id="intro">HI THERE!! 
+                A BMI (Body Mass Index) calculator is a simple tool used to assess a person's body weight relative to their height.
+                 It calculates a numerical value based on the individual's weight and height, which is then used to categorize their 
+                 weight status into different categories such as underweight, normal weight, overweight, or obese. This calculation
+                  helps provide an indication of potential health risks associated with weight, such as heart disease, diabetes, and hypertension. </p>
+                </div>
+    <section id="usages">
+        <h1 class="greeting">Why BMI Calculator?</h1>
+        <div class = "cards">
+           <div class="card">
+                <h1 class="cardTitle">HEALTH MONITORING</h1>
+                <p>Individuals can use the BMI calculator to monitor their weight changes over time, helping them track progress in weight management efforts or identify potential concerns.</p>
+           </div>
+            <div class="card">
+                <h1 class="cardTitle">CLINICAL USE</h1>
+                <p>Healthcare professionals utilize BMI as a screening tool in clinical settings to assess patients' weight status and potential health risks, guiding treatment decisions and interventions related to weight management and overall health.</p>
+            </div>
+            <div class="card">
+                <h1 class="cardTitle">PUBLIC HEALTH PLANNING</h1>
+                <p> Population-level BMI data collected through calculators and surveys can inform public health officials about trends in weight status within communities, guiding interventions aimed at reducing obesity rates and promoting healthier lifestyles.</p>
+           </div>
+
+        </div>
+    </section>
+    <section id = "information">
+        <h1 class="greeting">Information</h1>
+        <img src="bmi shape.jpg" alt="bmi" id="bmiPhoto">
+    </section>
+
+    <section id="calculate">
+        <h1 class="title"> Calculator</h1>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+
+        <form class ="calculator">
+            <div>
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" min="0" step="0.01"
+                value="0"/>
+            </div>
+
+            <div>
+                <label for="height">Height (cm)</label>
+                <input type="number" id="Height" min="0" step="0.01"
+                value="0"/> 
+            </div>
+
+            <div class="button">
+                <button type="Reset">Reset</button>
+                <button type="Submit">Submit</button>
+            </div>
+
+        </form>
+        
+        <section class="output">
+            <h3> Your BMI is</h3>
+            <p id="bmi">0</p>
+            <p id="desc">N/A</p>
+        </section>
+        <section class="bmi-scale">
+            <div style="--color: var(--Underweight)">
+                <h4>Underweight</h4>
+                <p>&lt; 18.5</p>
+            </div>
+
+            <div style="--color: var(--Normal)">
+                     <h4>Normal</h4>
+                    <p>18.5-25</p>
+            </div>
+
+            <div style="--color: var(--Overweight)">
+                <h4>Overweight</h4>
+                <p>25-30</p>
+            </div>
+
+            <div style="--color: var(--Obese)">
+                <h4>Obese</h4>
+                <p>>=30</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

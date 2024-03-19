@@ -1,30 +1,26 @@
 const bmiText = document.getElementById('bmi');
 const descText= document.getElementById('desc');
-const form= document.querySelector('#calculator');
 
-form.addEventListener('Submit', onformSubmit);
-form.addEventListener('Reset', onFormReset);
 
-function onFormReset(){
+function Reset(){
     bmiText.textContent = 0;
     bmiText.className ="";
     descText.textContent = "N/A";
 }
 
-function onformSubmit(e) {
-    e.preventDefault();
+function Calculate(){
 
-    const weight = parseFloat(document.getElementById('weight').value);
-    const height = parseFloat(document.getElementById('height').value);
+    let weight = parseFloat(document.getElementById('Weight').value);
+    let height = parseFloat(document.getElementById('Height').value);
 
     if(isNaN(weight) || isNaN(height) || weight<=0 || height<=0)
     {
         alert ("Please enter a valid weight and height");
         return;
     }
-    const heightInMeter = height / 100 ; 
-    const bmi= weight/Math.pow(heightInMeter, 2);
-    const desc = interpretBMI(bmi);
+    let heightInMeter = height / 100 ; 
+    let bmi= weight/Math.pow(heightInMeter, 2);
+    let desc = interpretBMI(bmi);
      
     if(desc === undefined) {
         alert("An error occurred while interpreting BMI");
